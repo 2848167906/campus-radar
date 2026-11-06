@@ -6,6 +6,7 @@ Campus Radar 配置文件
 # ==================== 监控公司开关 ====================
 # 把不想监控的公司设为 False 即可
 ENABLED_COMPANIES = {
+    "小红书": True,   # 聚合平台，补充行业动态
     "offerstar": True,   # 聚合平台，补充行业动态
 }
 
@@ -57,6 +58,12 @@ TARGET_CITIES = ["东莞", "惠州", "深圳", "广州"]
 
 # ==================== 各公司专属参数 ====================
 COMPANY_CONFIG = {
+        "小红书": {
+        # term_regular = 应届生校招
+        "campus_recruit_types": ["term_regular"],
+        # workplace 城市编码（4401=上海）。留空则不限城市
+        "workplaces": [],  # [] = 全国
+    },
     "offerstar": {
         # 聚合平台查询参数
         "title": "2027",
