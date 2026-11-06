@@ -6,11 +6,6 @@ Campus Radar 配置文件
 # ==================== 监控公司开关 ====================
 # 把不想监控的公司设为 False 即可
 ENABLED_COMPANIES = {
-    "京东": True,
-    "快手": True,
-    "小红书": True,
-    "拼多多": True,
-    "淘宝": True,
     "offerstar": True,   # 聚合平台，补充行业动态
 }
 
@@ -62,28 +57,6 @@ TARGET_CITIES = ["东莞", "惠州", "深圳", "广州"]
 
 # ==================== 各公司专属参数 ====================
 COMPANY_CONFIG = {
-    "京东": {
-        # 应届生招聘类型，type=present 表示应届生
-        "type": "present",
-    },
-    "快手": {
-        # 27届校招项目代码（从官网 URL 里提取）
-        "recruit_sub_project_codes": ["20271779425607"],
-    },
-    "小红书": {
-        # term_regular = 应届生校招
-        "campus_recruit_types": ["term_regular"],
-        # workplace 城市编码（4401=上海）。留空则不限城市
-        "workplaces": [],  # [] = 全国
-    },
-    "拼多多": {
-        # t=null 表示全部类别，也可填具体类别 job code
-        "t": None,
-    },
-    "淘宝": {
-        # batchId 会自动获取，这里留默认即可
-        "batch_channel": "campus_group_official_site",
-    },
     "offerstar": {
         # 聚合平台查询参数
         "title": "2027",
